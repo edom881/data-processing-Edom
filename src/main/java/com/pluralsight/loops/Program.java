@@ -49,6 +49,33 @@ public class Program {
             System.out.println(person.firstName + " "
                     + person.lastName + " - Age: " + person.age);
         }
+
+        // Variables for age calculations
+        int totalAge = 0;
+        int oldestAge = people.get(0).age;
+        int youngestAge = people.get(0).age;
+
+// Loop through all people
+        for (Person person : people) {
+            totalAge += person.age;
+
+            if (person.age > oldestAge) {
+                oldestAge = person.age;
+            }
+
+            if (person.age < youngestAge) {
+                youngestAge = person.age;
+            }
+        }
+
+// Calculate average age
+        double averageAge = (double) totalAge / people.size();
+
+// Display results
+        System.out.println("\nAge Summary:");
+        System.out.println("Average age: " + averageAge);
+        System.out.println("Oldest age: " + oldestAge);
+        System.out.println("Youngest age: " + youngestAge);
         // Display all people
         for (Person person : people) {
             System.out.println(person.firstName + " " +
