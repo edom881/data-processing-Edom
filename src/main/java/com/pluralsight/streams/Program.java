@@ -27,6 +27,20 @@ public class Program {
 
         System.out.print("Enter a first or last name to search: ");
         String searchName = scanner.nextLine();
+        // Search using stream and filter
+        ArrayList<Person> matches = people.stream()
+                .filter(person -> person.firstName.equalsIgnoreCase(searchName)
+                        || person.lastName.equalsIgnoreCase(searchName))
+                .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+
+// Display matches
+        System.out.println("\nMatching People:");
+
+        for (Person person : matches) {
+            System.out.println(person.firstName + " "
+                    + person.lastName + " - Age: " + person.age);
+        }
+
 
     }
 
