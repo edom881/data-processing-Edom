@@ -1,9 +1,10 @@
-package com.pluralsight.loops;
+package com.pluralsight;
 
 public class Person {
     String firstName;
     String lastName;
     int age;
+
 
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
