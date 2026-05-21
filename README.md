@@ -1,20 +1,42 @@
-Data Processing Application
+# Data Processing with Streams
 
+## Description
+This Java application demonstrates how to use Java Streams to process and analyze data.
 
-This Java application stores and processes a list of people using loops and ArrayLists.
+The program stores a list of people and allows the user to:
+- Search for people by first or last name
+- Calculate the average age
+- Find the oldest person
+- Find the youngest person
 
-The program:
+This project uses Java Stream methods such as:
+- stream()
+- filter()
+- map()
+- reduce()
+- max()
+- min()
 
-Creates a list of people
-Searches for people by first or last name
-Displays matching results
-Calculates the average age
-Finds the oldest person
-Finds the youngest person
+## Features
+- Uses a Person class
+- Uses ArrayList collections
+- Uses Java Streams
+- Uses Scanner for user input
+- Performs data analysis with streams
 
-Features
+## Technologies Used
+- Java
+- IntelliJ IDEA
+- Maven
 
-Uses ArrayList
-Uses for loops
-Uses Scanner for user input
-Calculates statistics from data
+## Example Output
+
+```text
+Enter a first or last name to search: Smith
+
+Matching People:
+John Smith - Age: 25
+
+Average age: 32.9
+Oldest age: 60
+Youngest age: 18
