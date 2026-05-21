@@ -83,5 +83,13 @@ public class Program {
             System.out.println(person.firstName + " " +
                     person.lastName + " - Age: " + person.age);
         }
+        // Calculate average age using streams
+        double averageAge = people.stream()
+                .map(person -> person.age)
+                .reduce(0, Integer::sum) / (double) people.size();
+
+        System.out.println("\nAverage age: " + averageAge);
     }
+
+
 }
