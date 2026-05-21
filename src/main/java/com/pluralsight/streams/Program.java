@@ -48,7 +48,24 @@ public class Program {
         System.out.println("\nAverage age: " + averageAge);
 
 
+        // Find oldest age using streams
+        int oldestAge = people.stream()
+                .map(person -> person.age)
+                .max(Integer::compare)
+                .get();
+
+        // Find youngest age using streams
+        int youngestAge = people.stream()
+                .map(person -> person.age)
+                .min(Integer::compare)
+                .get();
+
+// Display results
+        System.out.println("Oldest age: " + oldestAge);
+        System.out.println("Youngest age: " + youngestAge);
 
     }
+
+
 
 }
